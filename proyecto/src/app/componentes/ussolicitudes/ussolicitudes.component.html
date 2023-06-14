@@ -1,0 +1,25 @@
+<app-menuusuario></app-menuusuario>
+<div class="contenido table-responsive">
+  <div class="titulo"> TUS SOLICITUDES</div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">FECHA SOLICITUD</th>
+          <th scope="col">DESTINO</th>
+          <th scope="col">LABORATORIO</th>
+          <th scope="col">ESTADO</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of datos">
+        <tr *ngIf="item.usnombre == nombre">
+                <th scope="row">{{item.fecha}}</th>
+                <td>{{item.destino}}</td>
+                <td>{{item.laboratorio}}</td>
+                <td>{{item.estado}}</td>         
+       </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <app-footer></app-footer>
+

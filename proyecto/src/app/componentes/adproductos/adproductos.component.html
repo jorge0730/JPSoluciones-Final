@@ -1,0 +1,111 @@
+<app-headermenu></app-headermenu>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Nuevo producto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <label for="recipient-name" class="col-form-label input">Nombre</label>
+            <input type="text" class="form-control input" id="this.nombre" [(ngModel)]="this.nombre">
+            <label for="recipient-name" class="col-form-label input">Número de parte</label>
+            <input type="text" class="form-control input" id="this.pn" [(ngModel)]="this.pn">
+            <label for="recipient-name" class="col-form-label input">Cantidad</label>
+            <input type="text" class="form-control input" id="this.cantidad" [(ngModel)]="this.cantidad">
+            <div class="form-group input">
+              <label for="this.marca">Marca</label>
+              <select class="form-control" id="this.marca" [(ngModel)]="this.marca">
+                <option>Mindray</option>
+                <option>Human</option>
+                <option>Dirui</option>
+                <option>Diesse</option>
+                <option>Purikor</option>
+              </select>
+            </div>
+            <label for="recipient-name" class="col-form-label input">Descripción</label>
+            <input type="text" class="form-control input" id="this.descripcion" [(ngModel)]="this.descripcion">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="guardar()">Crear producto</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="contenido table-responsive">
+    <button type="button" class="btn btn-primary nuevou" data-toggle="modal" (click)="nuevo()">Nuevo producto</button>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE PRODUCTO</th>
+          <th scope="col">NÚMERO DE PARTE</th>
+          <th scope="col">CANTIDAD</th>
+          <th scope="col">MARCA</th>
+          <th scope="col">DESCRIPCIÓN</th>
+          <th scope="col">IMAGEN</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let item of datos">
+          <th scope="row">{{item.nombre}}</th>
+          <td>{{item.pn}}</td>
+          <td>{{item.cantidad}}</td>
+          <td>{{item.marca}}</td>
+          <td>{{item.descripcion}}</td>
+          <td> <img class="imagenproducto" src="{{peticion.urllocal + '/productos/'+ item._id + '.png'}}" alt=""></td>
+          <td>
+            <button type="button" class="btn btn-primary boton" data-toggle="modal" (click)="editar(item._id)">Editar</button>
+            <button type="button" class="btn btn-dark boton" (click)="eliminar(item._id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar producto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <label for="recipient-name" class="col-form-label input">Nombre</label>
+            <input type="text" class="form-control input" id="this.nombre" [(ngModel)]="this.nombre">
+            <label for="recipient-name" class="col-form-label input">Número de parte</label>
+            <input type="text" class="form-control input" id="this.pn" [(ngModel)]="this.pn">
+            <label for="recipient-name" class="col-form-label input">Cantidad</label>
+            <input type="text" class="form-control input" id="this.cantidad" [(ngModel)]="this.cantidad">
+            <div class="form-group input">
+              <label for="this.marca">Marca</label>
+              <select class="form-control" id="this.marca" [(ngModel)]="this.marca">
+                <option>Mindray</option>
+                <option>Human</option>
+                <option>Dirui</option>
+                <option>Diesse</option>
+                <option>Purikor</option>
+              </select>
+            </div>
+            <label for="recipient-name" class="col-form-label input">Descripción</label>
+            <input type="text" class="form-control input" id="this.descripcion" [(ngModel)]="this.descripcion">
+            <div class="subir">
+              <app-subirarchivos [urldestino]="item.destino" [path]="item.path"[fileName]="'userFile'"></app-subirarchivos>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="actualizar()">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <app-footer></app-footer>

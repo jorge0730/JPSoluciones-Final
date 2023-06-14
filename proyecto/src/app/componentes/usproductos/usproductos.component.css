@@ -1,0 +1,27 @@
+
+.boton{
+    margin-right: 10px;
+}
+.tarjeta{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.nuevou{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: calc(50% - 148px);
+}
+.nombre{
+    color: rgb(41, 21, 192);
+}
+.imacard{
+    margin-top: 5px;
+    margin-left: 70px;
+    width: 150px;
+    height: 150px;
+}
+.card{
+    background-color: #cacdcf;
+}

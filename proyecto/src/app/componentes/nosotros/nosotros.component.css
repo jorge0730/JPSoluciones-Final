@@ -1,0 +1,25 @@
+#contenido{
+    padding-top: 40px;
+    text-align: center;
+    font-style: oblique;
+
+    height: 370px;
+    /* margin-left: calc(50% - 250px); */
+}
+.boton{
+    margin-left: 5px;
+}
+.lista{
+    margin-left: 20px;
+}
+.imagen{
+    margin-top: 100px;
+    width: 20px;
+    height: 150px;
+}
+.carrusel{
+    margin-top:50px;
+}
+.imacar{
+    height: 300px;
+}

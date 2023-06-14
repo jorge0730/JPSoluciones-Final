@@ -1,0 +1,24 @@
+<app-menuusuario></app-menuusuario>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-9">
+        <label for="exampleFormControlInput1">Nombre</label>
+        <input type="text" class="form-control input" id="this.nombre" [(ngModel)]="this.nombre" ><br>
+        <label for="exampleFormControlInput1">Correo electrónico</label>
+        <input type="text" class="form-control input" id="this.email" [(ngModel)]="this.email" disabled><br>
+        <label for="exampleFormControlInput1">Contraseña</label>
+        <input type="password" class="form-control input" id="this.password" [(ngModel)]="this.password"><br>
+        <label for="exampleFormControlInput1">Rol</label>
+        <input type="text" class="form-control input" id="this.rol" [(ngModel)]="this.rol" disabled><br>
+        <div>
+          <button type="button" class="btn btn-primary boton" (click)="actualizar()">Actualizar</button> 
+        </div>  
+          
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

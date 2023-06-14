@@ -1,0 +1,52 @@
+<app-headermenu></app-headermenu>
+<div class="contenido table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE </th>
+          <th scope="col">CORREO ELECTRÓNICO</th>
+          <th scope="col">MENSAJE</th>
+          <th>ESTADO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let item of datos">
+          <th scope="row">{{item.nombre}}</th>
+          <td>{{item.email}}</td>
+          <td>{{item.mensaje}}</td>
+          <td>{{item.estado}}</td>
+          <td>
+            <button type="button" class="btn btn-primary boton" data-toggle="modal" (click)="editar(item._id)">Cambiar estado</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+ </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar estado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group input">
+          <label for="this.estado">Estado</label>
+          <select class="form-control" id="this.estado" [(ngModel)]="this.estado">
+            <option>Sin resolver</option>
+            <option>Verificando</option>
+            <option>Resuelto</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="actualizar()">Actualizar estado</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

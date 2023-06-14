@@ -1,0 +1,13 @@
+.contenido{
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    padding: 0 10px;
+    height: 100vh;
+    text-align: justify;
+}
+.titulo{
+    font-style: italic;
+    padding-left: calc(50% - 200px);
+    font-size: xx-large;
+    font-weight: 700;
+}

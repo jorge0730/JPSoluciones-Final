@@ -1,0 +1,98 @@
+<app-headermenu></app-headermenu>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary nuevou" data-toggle="modal" (click)="nuevo()">
+  Nuevo usuario
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Nuevo usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <label for="recipient-name" class="col-form-label input">Nombre</label>
+            <input type="text" class="form-control input" id="this.nombre" [(ngModel)]="this.nombre">
+            <label for="recipient-name" class="col-form-label input">Correo electrónico</label>
+            <input type="text" class="form-control input" id="this.email" [(ngModel)]="this.email">
+            <label for="recipient-name" class="col-form-label input">Contraseña</label>
+            <input type="text" class="form-control input" id="this.password" [(ngModel)]="this.password">
+            <div class="form-group input">
+              <label for="this.rol">Rol</label>
+              <select class="form-control" id="this.rol" [(ngModel)]="this.rol">
+                <option>Logística</option>
+                <option>Ingeniería</option>
+              </select>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="guardar()">Crear usuario</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="contenido table-responsive">
+    <table class="table table-striped ">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE USUARIO</th>
+          <th scope="col">CORREO ELECTRÓNICO</th>
+          <th scope="col">CONTRASEÑA</th>
+          <th scope="col">ROL</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let item of datos">
+          <th scope="row">{{item.nombre}}</th>
+          <td>{{item.email}}</td>
+          <td>{{item.password}}</td>
+          <td>{{item.rol}}</td>
+          <td>
+            <button type="button" class="btn btn-primary boton" data-toggle="modal" (click)="editar(item._id)">Editar</button>
+            <button type="button" class="btn btn-dark boton" (click)="eliminar(item.email)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label for="recipient-name" class="col-form-label input">Nombre</label>
+            <input type="text" class="form-control input" id="this.nombre" [(ngModel)]="this.nombre">
+            <label for="recipient-name" class="col-form-label input">Correo electrónico</label>
+            <input type="text" class="form-control input" id="this.email" [(ngModel)]="this.email">
+            <label for="recipient-name" class="col-form-label input">Contraseña</label>
+            <input type="text" class="form-control input" id="this.password" [(ngModel)]="this.password">
+            <div class="form-group input">
+              <label for="this.rol">Rol</label>
+              <select class="form-control" id="this.rol" [(ngModel)]="this.rol">
+                <option>Logística</option>
+                <option>Ingeniería</option>
+              </select>
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="actualizar()">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <app-footer></app-footer>

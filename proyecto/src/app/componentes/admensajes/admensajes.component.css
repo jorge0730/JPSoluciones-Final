@@ -1,0 +1,10 @@
+.contenido{
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    padding: 0 10px;
+    height: 100%;
+    text-align: justify;
+}
+.boton{
+    margin-left: 20px;
+}

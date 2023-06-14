@@ -1,0 +1,25 @@
+.selectfile {
+    background: #2196F3;
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+}
+
+.contenedorupload {
+    width: 300px;
+    margin: 3px;
+    border-radius: 11px;
+}
+
+label.btn.btn-default {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+button.btn.btn-success.btnsubir {
+    width: 100%;
+}
+.mensaje{
+    text-align: center;
+}

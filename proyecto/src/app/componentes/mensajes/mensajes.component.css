@@ -1,0 +1,12 @@
+#contenedormensaje{
+    
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 35%;
+    position: absolute;
+    z-index: 9;
+    width: 30%;
+    right: 5px;
+}

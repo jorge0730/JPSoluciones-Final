@@ -1,0 +1,34 @@
+<app-header1></app-header1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm col1">
+        <img src="./assets/marcas.png" width="300" height="300" alt="">
+      </div>
+      <div class="col-sm contenedor col2">
+            <div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nombre</label>
+                  <input type="text" class="form-control" id="this.nombre" [(ngModel)]="this.nombre">
+                  <label for="exampleFormControlInput1">Correo electrónico</label>
+                  <input type="email" class="form-control" id="this.email" [(ngModel)]="this.email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Mensaje</label>
+                  <textarea class="form-control" id="this.mensaje" rows="5" [(ngModel)]="this.mensaje"></textarea>
+                </div>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="guardar()">Enviar</button>
+              </div>
+
+      </div>
+      <div class="col-sm col3">
+        <p>
+            En JP Soluciones es un gusto poder atender todas tus solicitudes y brindar una respuesta oportuna a todas estas. 
+            En caso de tener algún requerimiento, por favor diligencie todos los campos, explique su inquietud o requerimiento
+            en el campo Mensaje de una forma clara y resumida.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<app-footer></app-footer>

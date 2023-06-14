@@ -1,0 +1,34 @@
+.col1footer{
+    width: 400px;
+    padding-top: 30px;
+    background-color: #343a40;
+    text-align: center;
+    color: azure;
+    font-style: oblique;
+    font-size: smaller;
+    font-weight: 600;
+}
+.col2footer{
+    padding-top: 40px;
+    background-color: #343a40;
+    text-align: center;
+    color: azure;
+    font-style: oblique;
+    font-size: smaller;
+    font-weight: 600;
+}
+.col3footer{
+    background-color: #343a40;
+}
+.mapa{
+    padding-top: 10px;
+    padding-left: calc( 50% - 150px);
+}
+.container{
+    position: relative;
+    padding-left: calc(50% - 580px);
+}
+.links{
+    padding-left: calc(50% - 100px);
+    padding-top: 5px;
+}

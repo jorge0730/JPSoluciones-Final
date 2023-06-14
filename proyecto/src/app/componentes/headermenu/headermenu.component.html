@@ -1,0 +1,33 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="usuario">{{nombre}}</div>
+
+      <div class="imagen"><img src="./assets/nombre.JPG" width="250" height="60" alt=""></div>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse lista" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">           
+          </li>
+        </ul>
+        
+        <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button"><a (click)="logout()">Salir</a></button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="lateral">
+    <header><Main>MENÚ</Main></header>
+    <ul class="menuVert">
+    <li><a routerLink="/adpedidos">Pedidos</a></li>
+    <li><a routerLink="/adproductos">Productos</a></li>
+    <li><a routerLink="/adusuarios">Usuarios</a></li>
+    <li><a routerLink="/admensajes">Mensajes</a></li>
+    </ul>
+  </div>
+

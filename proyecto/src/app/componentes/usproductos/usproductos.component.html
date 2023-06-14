@@ -1,0 +1,81 @@
+<app-menuusuario></app-menuusuario>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">REALIZAR PEDIDO</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <label for="exampleFormControlInput1">Fecha solicitud</label>
+            <input type="date" class="form-control" id="this.fecha" [(ngModel)]="this.fecha">
+            <label for="exampleFormControlInput1">Ciudad destino</label>
+            <input type="text" class="form-control" id="this.destino" [(ngModel)]="this.destino">
+            <label for="exampleFormControlInput1">Laboratorio</label>
+            <input type="text" class="form-control" id="this.laboratorio" [(ngModel)]="this.laboratorio">
+            <label for="exampleFormControlInput1">Dirección</label>
+            <input type="email" class="form-control" id="this.direccion" [(ngModel)]="this.direccion">
+            <label for="exampleFormControlInput1">Contacto</label>
+            <input type="email" class="form-control" id="this.contacto" [(ngModel)]="this.contacto">
+            <label for="exampleFormControlInput1">Número de contacto</label>
+            <input type="email" class="form-control" id="this.nrocontacto" [(ngModel)]="this.nrocontacto">
+          <div class="contenido">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">NOMBRE PRODUCTO</th>
+                  <th scope="col">NÚMERO DE PARTE</th>
+                  <th scope="col">CANTIDAD</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let item of datos">
+                  <th scope="row">{{item.nombre}}</th>
+                  <td>{{item.pn}}</td>
+                  <td>{{item.cantidad}}</td>
+                  <td>
+                    <button type="button" class="btn btn-dark boton" >Eliminar</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="guardarpedido()">Realizar pedido</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" >Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="contenido">
+      <button type="button" class="btn btn-primary nuevou" data-toggle="modal" data-target="#staticBackdrop">Realizar pedido</button>
+      <div class="row ">
+        <div class="col-sm tarjeta" *ngFor="let item of datos">
+          <div class="card" style="width: 18rem;">
+            <div class="imacard">
+              <img class="card-img-top" src="{{peticion.urllocal + '/productos/'+ item._id + '.png'}}" alt="Card image cap" width="150" height="150">
+            </div>
+            <div class="card-body">
+              <h6 class="card-title nombre">{{item.nombre}}</h6>
+              <h6 class="card-title">PN:{{item.pn}}</h6>
+              <h6 class="card-title">STOCK: {{item.cantidad}}</h6>
+              <h6 class="card-title">MARCA: {{item.marca}}</h6>
+              <p class="card-text">{{item.descripcion}}</p>
+              <button type="button" class="btn btn-primary" (click)="guardarpedido()">Agregar</button>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    
+    <app-footer></app-footer>
+
+

@@ -1,0 +1,13 @@
+
+.container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 483px;
+}
+.col-9{
+    padding-left: 50px;
+}
+.boton{
+    margin-left: calc(50% - 50px);
+} 

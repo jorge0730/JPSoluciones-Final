@@ -1,0 +1,20 @@
+.lista{
+    margin-left: 20px;
+}
+.container{
+    margin-bottom: 20px;
+}
+.col1{
+    padding-top: 50px;
+    text-align: center;
+}
+.col2{
+    margin-top: 20px;
+}
+.col3{
+    font-weight: 400;
+    font-size: large;
+    padding-top: 150px;
+    text-align: center;
+    font-style: oblique;
+}
